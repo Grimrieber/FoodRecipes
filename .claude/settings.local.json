@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(py -c \":*)",
+      "Bash(sqlcmd -S localhost -U sa -P 1wa9NXV -C -d RecipeDB -i \"d:/VB Projects/Web App/FoodRecipes/Recipes/SQL/CreateTables.sql\")",
+      "Bash(py -m pip install pyodbc)",
+      "Bash(py \"d:/VB Projects/Web App/FoodRecipes/Recipes/SQL/ImportRecipes.py\")",
+      "Bash(sqlcmd -S localhost -U sa -P 1wa9NXV -C -d RecipeDB -Q \"DELETE FROM RecipeTags; DELETE FROM RecipeNutrition; DELETE FROM RecipeDirections; DELETE FROM RecipeIngredients; DELETE FROM Recipes; DELETE FROM Categories; DBCC CHECKIDENT \\(''Categories'', RESEED, 0\\); DBCC CHECKIDENT \\(''Recipes'', RESEED, 0\\); DBCC CHECKIDENT \\(''RecipeIngredients'', RESEED, 0\\); DBCC CHECKIDENT \\(''RecipeDirections'', RESEED, 0\\);\")",
+      "Bash(sqlcmd -S localhost -U sa -P 1wa9NXV -C -d RecipeDB -Q \":*)"
+    ]
+  }
+}

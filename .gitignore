@@ -1,0 +1,32 @@
+## Build output
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+
+## Visual Studio
+.vs/
+*.user
+*.suo
+*.sln.docstates
+
+## NuGet packages (restored on build)
+packages/
+*.nupkg
+
+## Secrets — never commit
+Web.*.Local.config
+appsettings.*.Local.json
+secrets.json
+*.pfx
+*.key
+
+## Local databases
+*.mdf
+*.ldf
+
+## OS
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.DS_Store

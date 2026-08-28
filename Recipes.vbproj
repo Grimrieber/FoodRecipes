@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{AFF424A4-0ECF-484B-A55E-5EFBAB48F87D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Recipes</RootNamespace>
+    <AssemblyName>Recipes</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Recipes.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Recipes.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>packages\Microsoft.Web.Infrastructure.2.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Client.5.2.9\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Core.5.2.9\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>packages\Microsoft.AspNet.WebApi.WebHost.5.2.9\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="RecipeBook.aspx" />
+    <Content Include="Tried and True Recipes\Breakfast\IMG_2631.JPG" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="App_Start\WebApiConfig.vb" />
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RecipeBook.aspx.vb">
+      <DependentUpon>RecipeBook.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Views\web.config" />
+    <None Include="packages.config" />
+    <Content Include="Tried and True Recipes\Appetizers\Baked Parmesan Herb Tomatoes.docx" />
+    <Content Include="Tried and True Recipes\Appetizers\Salsa.docx" />
+    <Content Include="Tried and True Recipes\Beef\Balsamic Glazed Meatballs.docx" />
+    <Content Include="Tried and True Recipes\Beef\BBQ Beef Sloppy Joes.docx" />
+    <Content Include="Tried and True Recipes\Beef\Best Ever Juicy Burgers.docx" />
+    <Content Include="Tried and True Recipes\Beef\Cheesy Taco Pasta.docx" />
+    <Content Include="Tried and True Recipes\Beef\Chili.docx" />
+    <Content Include="Tried and True Recipes\Beef\Cranberry Meatballs.docx" />
+    <Content Include="Tried and True Recipes\Beef\Doritos Taco Salad.docx" />
+    <Content Include="Tried and True Recipes\Beef\Easy Salsa Sloppy Joes.docx" />
+    <Content Include="Tried and True Recipes\Beef\Glazed Brown Sugar Meatloaf.docx" />
+    <Content Include="Tried and True Recipes\Beef\Ground Mongolian Beef.docx" />
+    <Content Include="Tried and True Recipes\Beef\Homemade Sloppy Joes.docx" />
+    <Content Include="Tried and True Recipes\Beef\Italian Herb Baked Meatballs.docx" />
+    <Content Include="Tried and True Recipes\Beef\Korean Ground Beef.docx" />
+    <Content Include="Tried and True Recipes\Beef\Mozzarella Stuffed Meatballs.docx" />
+    <Content Include="Tried and True Recipes\Beef\Porcupine Meatballs.docx" />
+    <Content Include="Tried and True Recipes\Beef\Sloppy Joe Mac and Cheese.docx" />
+    <Content Include="Tried and True Recipes\Beef\Sriracha Honey Meatballs.docx" />
+    <Content Include="Tried and True Recipes\Beef\Sweet and Sour Meatballs.docx" />
+    <Content Include="Tried and True Recipes\Beef\Taco Casserole.docx" />
+    <Content Include="Tried and True Recipes\Beef\Taco Pasta.docx" />
+    <Content Include="Tried and True Recipes\Beef\Taco Spaghetti.docx" />
+    <Content Include="Tried and True Recipes\Beef\Tacos.docx" />
+    <Content Include="Tried and True Recipes\Breakfast\Georgina%27s Sour Cream Pancakes.docx" />
+    <Content Include="Tried and True Recipes\Breakfast\Pancakes.docx" />
+    <Content Include="Tried and True Recipes\Breakfast\Scrambled Egg Muffins.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Asian Glazed Chicken.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Autumn Apple Chicken.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Bacon Brown Sugar Garlic Chicken - 2.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Bacon Brown Sugar Garlic Chicken - 6.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Bacon Wrapped Jalapeño Stuffed Chicken - serves 2.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Bacon Wrapped Jalapeño Stuffed Chicken - serves 4.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Bacon Wrapped Stuffed Chicken Breast.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Baked Lemon Chicken.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Baked Parmesan Garlic Chicken.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Baked Salsa Verde Chicken.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Baked Thai Peanut Chicken.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Balsamic Chicken.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Blackberry Sriracha Chicken Sliders.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Brown Sugar Garlic Chicken.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Bruschetta Chicken - 2 Servings.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Bruschetta Chicken - 4 servings.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Brushetta Chicken Pasta Salad.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Caprese Chicken.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Cashew Chicken.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Chicken Bacon Alfredo Roll Ups.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Chicken Piccata.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Chicken, Spinach, and Cheese Pasta Bake.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Cinnamon Whiskey BBQ Chicken Wraps.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Creamy Asiago Chicken.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Easy Bourbon Chicken.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Garlic Beer Marinade for Grilled Chicken.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Grilled Margarita Chicken with Marinade - 2 Servings.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Grilled Margarita Chicken with Marinade - 4 Servings.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Hawaiian Pineapple Chicken.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Honey Garlic Chicken.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Lemon Garlic Chicken.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Margarita Chicken Quesadillas.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Mongolian Chicken.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Monterey Chicken Spaghetti Casserole.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Mustard Chicken.docx" />
+    <Content Include="Tried and True Recipes\Chicken\One Pot Cheesy Italian Pasta and Chicken.doc" />
+    <Content Include="Tried and True Recipes\Chicken\Orange Chicken.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Pepperoni Chicken Bake.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Salsa Verde Chicken Casserole.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Spicy Bourbon Chicken.docx" />
+    <Content Include="Tried and True Recipes\Chicken\Sundried Tomato Chicken Pasta.docx" />
+    <Content Include="Tried and True Recipes\Chicken\White Chicken Enchiladas.docx" />
+    <Content Include="Tried and True Recipes\Desserts\Berry Cheesecake Salad.docx" />
+    <Content Include="Tried and True Recipes\Desserts\Chef John%27s Lemon Ice.docx" />
+    <Content Include="Tried and True Recipes\Desserts\Cinnamon Apples.docx" />
+    <Content Include="Tried and True Recipes\Desserts\English Toffee Bars.docx" />
+    <Content Include="Tried and True Recipes\Desserts\Gorilla Bread.docx" />
+    <Content Include="Tried and True Recipes\Desserts\Hawaiian Cheesecake Salad.docx" />
+    <Content Include="Tried and True Recipes\Desserts\Lemon Berry Cheesecake Salad.docx" />
+    <Content Include="Tried and True Recipes\Desserts\Piña Colada Cheesecake Salad.docx" />
+    <Content Include="Tried and True Recipes\Desserts\Red, White and Blue Cheesecake Salad.docx" />
+    <Content Include="Tried and True Recipes\Desserts\S%27mores Bars.docx" />
+    <Content Include="Tried and True Recipes\Desserts\Snickers Caramel Apple Cheesecake Salad.docx" />
+    <Content Include="Tried and True Recipes\Desserts\Strawberry Banana Cheesecake Salad.docx" />
+    <Content Include="Tried and True Recipes\Dinner\Bacon Chicken Alfredo Pizza.docx" />
+    <Content Include="Tried and True Recipes\Dinner\Baked Ziti.docx" />
+    <Content Include="Tried and True Recipes\Dinner\BBQ Chicken Pizza.docx" />
+    <Content Include="Tried and True Recipes\Dinner\Italian Sausage Quesadillas.docx" />
+    <Content Include="Tried and True Recipes\Dinner\Lasagna.docx" />
+    <Content Include="Tried and True Recipes\Dinner\Margherita Pizza.docx" />
+    <Content Include="Tried and True Recipes\Dinner\Pepperoni and Sausage Pizza Quiche.docx" />
+    <Content Include="Tried and True Recipes\Dinner\Pepperoni Pizza.docx" />
+    <Content Include="Tried and True Recipes\Dinner\Pizza Pasta.docx" />
+    <Content Include="Tried and True Recipes\Dinner\Pizza Sloppy Joes.docx" />
+    <Content Include="Tried and True Recipes\Firecracker Chicken.docx" />
+    <Content Include="Tried and True Recipes\Sauces\Alfredo Sauce.docx" />
+    <Content Include="Tried and True Recipes\Sauces\Asian Peanut Noodles.docx" />
+    <Content Include="Tried and True Recipes\Sauces\Baked Chicken with Herb Butter Sauce.docx" />
+    <Content Include="Tried and True Recipes\Sauces\Boursin Pasta.docx" />
+    <Content Include="Tried and True Recipes\Sauces\Cajun Chicken Pasta.docx" />
+    <Content Include="Tried and True Recipes\Sauces\Carbonara Pasta.docx" />
+    <Content Include="Tried and True Recipes\Sauces\Chef John%27s Penne with Vodka Sauce.docx" />
+    <Content Include="Tried and True Recipes\Sauces\Chicken and Bacon Pasta with Spinach and Tomatoes in Garlic Cream Sauce.docx" />
+    <Content Include="Tried and True Recipes\Sauces\Chicken and Mushrooms in a White Wine Cream Sauce.docx" />
+    <Content Include="Tried and True Recipes\Sauces\Chicken Bacon Ranch Pasta, 2 Servings.docx" />
+    <Content Include="Tried and True Recipes\Sauces\Chicken Bacon Ranch Pasta, 8 Servings.docx" />
+    <Content Include="Tried and True Recipes\Sauces\CPK Chicken Tequila Fettuccini.docx" />
+    <Content Include="Tried and True Recipes\Sauces\Creamy Cajun  Sauce.docx" />
+    <Content Include="Tried and True Recipes\Sauces\Creamy Garlic Penne Pasta.docx" />
+    <Content Include="Tried and True Recipes\Sauces\Creamy Parmesean Garlic Mushroom Chicken.docx" />
+    <Content Include="Tried and True Recipes\Sauces\Creamy Tomato Basil Chicken.docx" />
+    <Content Include="Tried and True Recipes\Sauces\Creamy Tuscan Garlic Chicken.docx" />
+    <Content Include="Tried and True Recipes\Sauces\Crispy Parmesan Chicken with Creamy Lemon Garlic Pasta.docx" />
+    <Content Include="Tried and True Recipes\Sauces\Four Cheese Garlic White Cream Pasta Sauce.docx" />
+    <Content Include="Tried and True Recipes\Sauces\Mozzarella Penne Rosa Pasta with Sun Dried Tomatoes.docx" />
+    <Content Include="Tried and True Recipes\Sauces\Orecchiette Sausage Pasta in Creamy Tomato Sauce.docx" />
+    <Content Include="Tried and True Recipes\Sauces\Outback Seakhouse Bloomng Onion Sauce.docx" />
+    <Content Include="Tried and True Recipes\Sauces\Penne alla Vodka.docx" />
+    <Content Include="Tried and True Recipes\Sauces\Quick and Easy Marinara Sauce.docx" />
+    <Content Include="Tried and True Recipes\Sauces\Roasted Garlic Cream Sauce.docx" />
+    <Content Include="Tried and True Recipes\Sauces\Spinach Tomato Pasta.docx" />
+    <Content Include="Tried and True Recipes\Sauces\Sundried Tomato Chicken.docx" />
+    <Content Include="Tried and True Recipes\Sauces\Tomato Spinach Chicken Spaghetti.docx" />
+    <Content Include="Tried and True Recipes\Sauces\Wolfgang Puck Spaghetti Sauce.docx" />
+    <Content Include="Tried and True Recipes\Seafood\Pickled Shrimp Recipe - Health.pdf" />
+    <Content Include="Tried and True Recipes\Soup\Cream of Tomato Soup.docx" />
+    <Content Include="Tried and True Recipes\Soup\Hamburger Soup.docx" />
+    <Content Include="Tried and True Recipes\Vegetables and Sides\Bob%27s Carrots.docx" />
+    <Content Include="Tried and True Recipes\Vegetables and Sides\Creamy Garlic Mushrooms and Bacon.docx" />
+    <Content Include="Tried and True Recipes\Vegetables and Sides\Grandma%27s Green Bean Casserole.docx" />
+    <Content Include="Tried and True Recipes\Vegetables and Sides\Maple Dijon Vegetables.docx" />
+    <Content Include="Tried and True Recipes\Water Flavors.xlsx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59129</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:59129/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
